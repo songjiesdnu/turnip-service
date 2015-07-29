@@ -15,7 +15,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.alibaba.fastjson.JSON;
-import com.robot.turnip.dao.IUserDao;
+import com.robot.turnip.dao.UserMapper;
 import com.robot.turnip.domain.User;
 import com.robot.turnip.service.IUserService;
 
@@ -25,12 +25,12 @@ public class UserServiceImpl implements IUserService {
 	private Logger logger = LoggerFactory.getLogger(UserServiceImpl.class);
 	
 	@Resource
-	private IUserDao userDao;
+	private UserMapper userMapper;
 	
 	@Override
 	public User getUserById(int userId) {
 		// TODO Auto-generated method stub
-		User user = userDao.selectByPrimaryKey(userId);
+		User user = userMapper.selectByPrimaryKey(userId);
 		logger.debug("user:" + JSON.toJSONString(user));
 		return user;
 	}
