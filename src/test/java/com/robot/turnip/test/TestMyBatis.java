@@ -36,7 +36,7 @@ public class TestMyBatis {
 
 	@Test
 	public void test1() { 
-		User user = userService.getUserById(1);
+		User user = userService.selectByPrimaryKey("1");
 		logger.info("user:{}", JSON.toJSONString(user));
 		JSON json = (JSON) JSON.toJSON(user);
 		User user2 = JSON.toJavaObject(json, user.getClass());
