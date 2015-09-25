@@ -21,9 +21,22 @@
 		<dependency>
 			<groupId>org.apache.commons</groupId>
 			<artifactId>commons-lang3</artifactId>
-			<version>${commons-lang.version}</version>
 		</dependency>
 
+		<!-- Mocking tools -->
+		<dependency>
+			<groupId>org.jmockit</groupId>
+			<artifactId>jmockit</artifactId>
+			<scope>test</scope>
+		</dependency>
+
+		<!-- Code coverage tool -->
+		<dependency>
+			<groupId>org.jmockit</groupId>
+			<artifactId>jmockit-coverage</artifactId>
+			<scope>runtime</scope>
+			<optional>true</optional>
+		</dependency>
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
@@ -85,6 +98,16 @@
 		<dependency>
 			<groupId>javax</groupId>
 			<artifactId>javaee-api</artifactId>
+		</dependency>
+
+		<!-- <dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>servlet-api</artifactId>
+		</dependency> -->
+		
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>javax.servlet-api</artifactId>
 		</dependency>
 
 		<!-- 导入Mysql数据库链接jar包 -->

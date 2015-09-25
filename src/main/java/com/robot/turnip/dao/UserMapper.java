@@ -7,6 +7,7 @@ import java.util.List;
 import org.apache.ibatis.session.RowBounds;
 
 public interface UserMapper {
+	
     int deleteByPrimaryKey(String id);
 
     int insert(User record);
